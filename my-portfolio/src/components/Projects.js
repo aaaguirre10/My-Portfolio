@@ -5,6 +5,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css'
 
 import Radius from '../assets/img/Radius.jpg';
+import CANBus from '../assets/img/CANBusProj.png';
 
 
 
@@ -17,34 +18,14 @@ export const Projects = () => {
             imgUrl: Radius,
         },
         {
-            title: "",
-            description: "",
-            imgUrl: "",
-        },
-        {
-            title: "",
-            imgUrl: "",
-            description: "",
-        },
-        {
-            title: "",
-            description: "",
-            imgUrl: "",
-        },
-        {
-            title: "",
-            description: "",
-            imgUrl: "",
-        },
-        {
-            title: "",
-            description: "",
-            imgUrl: "",
+            title: "CAN Bus Visualizer",
+            description: "The CAN Bus Visualizer System is a standalone web-based visualization system intended to be used by DAC analysts. The system provides the ability to visualize and manipulate the incoming traffic of a CAN Bus. The CAN Bus Visualizer System will listen to a CAN Bus network and connect to Other CAN Bus Visualizer Systems.",
+            imgUrl: CANBus,
         },
     ];
 
     return (
-        <section className="project" id="project">
+        <section className="project" id="projects">
             <Container>
                 <Row>
                     <Col size={12}>
@@ -52,7 +33,7 @@ export const Projects = () => {
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                                 <h2>Projects</h2>
-                                <p>Veniam adipisicing cupidatat quis est sit. Quis minim cillum duis sunt reprehenderit id nisi aliqua elit sunt aliqua. Dolor est minim esse dolore mollit ullamco. Elit ullamco proident esse adipisicing. Duis elit officia anim aliquip minim incididunt.</p>
+                                <p>This is a collection of projects that I completed that showcase a combination of skills and abilities that I learned throughout school as well as some that I taught myself.</p>
                                 <Tab.Container id='projects-tabs' defaultActiveKey="first">
                                     <Nav variant='pills' className='nav-pills mb-5 justify-content-center align-items-center' id='pills-tab'>
                                         <Nav.Item>
@@ -80,11 +61,11 @@ export const Projects = () => {
                                                 }
                                             </Row>
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey="section">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                        <Tab.Pane eventKey="second">
+                                            <p>Currently working on them.</p>
                                         </Tab.Pane>
                                         <Tab.Pane eventKey="third">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                            <p>Currently working on them.</p>
                                         </Tab.Pane>
                                     </Tab.Content>
                                 </Tab.Container>
@@ -94,7 +75,7 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className='background-image-right' src={colorSharp2}></img>
+            <img className='background-image-right' src={colorSharp2} alt='backgroundImage'></img>
         </section>
     )
 }

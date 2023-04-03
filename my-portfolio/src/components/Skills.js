@@ -1,5 +1,3 @@
-import { MdArrowForwardIos } from 'react-icons/md';
-import { MdArrowBackIos } from 'react-icons/md';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import BackendAstronaut from '../assets/img/BackendAstronaut.png';

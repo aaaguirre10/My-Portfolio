@@ -5,14 +5,16 @@ import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import BannerIcon from '../assets/img/BannerIcon.png';
 
 
+
 export const Banner = () => {
 
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false); 
     const [text, setText] = useState(''); 
     const [delta, setDelta] = useState(200 - Math.random() * 100);
+    // eslint-disable-next-line no-unused-vars
     const [index, setIndex] = useState(1); 
-    const toRotate = [ "Frontend Developer", "UI/UX Designer"];
+    const toRotate = [ "Software Engineer", "UI/UX Designer", "Frontend Developer"];
     const period = 2000;
 
     useEffect(() => {
@@ -21,6 +23,7 @@ export const Banner = () => {
         }, delta);
 
         return () => { clearInterval(ticker) };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
     const tick = () => {
@@ -57,9 +60,11 @@ export const Banner = () => {
                             {({ isVisible }) =>
                             <div className={isVisible ? "animate_animated animate_fadeIn" : ""}>
                                 <span className="tagline">Welcome to my <strong>Portfolio</strong></span>
-                                <h1>{`Hello! I'm Antonio, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Frontend Developer", "UI/UX Designer"]'><span className="wrap">{text}</span></span></h1>
-                                    <p>Anim consequat nulla in occaecat nostrud velit incididunt. Ea minim eu aliqua sint. Veniam nisi est eiusmod dolor in exercitation deserunt. Nulla nisi sunt consequat quis.</p>
-                                    <button onClick={() => console.log('CONNECTED')}><BsFillArrowRightCircleFill size={25}/> Let's Connect</button>
+                                <h1>{`Hello! I'm Antonio, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineer", "UI/UX Designer", "Frontend Developer"]'><span className="wrap">{text}</span></span></h1>
+                                    <p>I'm a recent graduate from the The University of Texas at El Paso. I'm currently looking for opportunites as software engineer and I'm open to doing freelance work as well.</p>
+                                    <a href="/#connect">
+                                        <button>Let's Connect<BsFillArrowRightCircleFill size={25} /></button>
+                                    </a>
                             </div>
                             }
                         </TrackVisibility>

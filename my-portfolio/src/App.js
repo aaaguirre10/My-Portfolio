@@ -7,14 +7,19 @@ import { NavBar } from './components/NavBar.js'
 import { Banner } from './components/Banner.js'
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
+
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <NavBar/>
       <Banner/>
       <Skills/>
       <Projects/>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }

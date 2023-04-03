@@ -17,12 +17,14 @@ export const NavBar = () => {
 
     useEffect(() => {
         const onScroll = () => {
-            if(window.screenY > 50){
+            if(window.scrollY > 50){
                 setScrolled(true);
             } else {
                 setScrolled(false);
             }
         }
+
+    
 
         window.addEventListener("scroll", onScroll)
     }, [])
@@ -49,13 +51,13 @@ export const NavBar = () => {
                         </Nav>
                         <span className="navbar-text">
                             <div className="social-icon">
-                                <a href="/">
+                                <a href="https://github.com/aaaguirre10">
                                     <FaGithub className="iconEffect" style={{color: 'white'}}/>
                                 </a>
-                                <a href="/">
+                                <a href="https://www.instagram.com/xo.tony/">
                                     <FaInstagram className="iconEffect" style={{color: 'white'}}/>
                                 </a>
-                                <a href="/">
+                                <a href="https://www.linkedin.com/in/antonioaaguirre/">
                                     <FaLinkedin className="iconEffect" style={{color: 'white'}}/>
                                 </a>
                             </div>
